@@ -14,6 +14,12 @@ const Home: React.FC<HomeProps> = ({ setPage, sermons, devotions }) => {
   const latestSermon = sermons[0] || null;
   const latestDevotion = devotions[0] || null;
 
+  const handlePlayClick = () => {
+    // Navigate to sermons page where the player will handle it
+    setPage('sermons');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="animate-in fade-in duration-700">
       {/* Hero Section */}
@@ -44,7 +50,7 @@ const Home: React.FC<HomeProps> = ({ setPage, sermons, devotions }) => {
               <ChevronRight size={20} />
             </button>
             <button 
-              onClick={() => setPage('sermons')}
+              onClick={handlePlayClick}
               className="w-full sm:w-auto bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-full text-lg font-bold hover:bg-white/20 transition-all flex items-center justify-center gap-2"
             >
               Watch Live
@@ -137,7 +143,10 @@ const Home: React.FC<HomeProps> = ({ setPage, sermons, devotions }) => {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {latestSermon && (
-              <div className="lg:col-span-2 group cursor-pointer relative overflow-hidden rounded-3xl bg-slate-900 shadow-2xl min-h-[400px]">
+              <div 
+                onClick={handlePlayClick}
+                className="lg:col-span-2 group cursor-pointer relative overflow-hidden rounded-3xl bg-slate-900 shadow-2xl min-h-[400px]"
+              >
                 <img 
                   src={latestSermon.thumbnail} 
                   alt={latestSermon.title} 
@@ -148,7 +157,7 @@ const Home: React.FC<HomeProps> = ({ setPage, sermons, devotions }) => {
                   <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">{latestSermon.title}</h3>
                   <p className="text-slate-300 mb-6 text-lg line-clamp-2">{latestSermon.notes}</p>
                   <div className="flex items-center gap-4">
-                    <button className="bg-white text-slate-900 p-4 rounded-full hover:bg-indigo-400 hover:text-white transition-colors">
+                    <button className="bg-white text-slate-900 p-4 rounded-full group-hover:bg-indigo-400 group-hover:text-white transition-all transform group-hover:scale-110">
                       <Play fill="currentColor" size={24} />
                     </button>
                     <div className="text-white">
@@ -161,12 +170,12 @@ const Home: React.FC<HomeProps> = ({ setPage, sermons, devotions }) => {
             )}
             <div className="space-y-6">
               {sermons.slice(1, 4).map((sermon) => (
-                <div key={sermon.id} className="flex gap-4 group cursor-pointer p-4 rounded-2xl hover:bg-slate-50 transition-colors">
+                <div key={sermon.id} onClick={handlePlayClick} className="flex gap-4 group cursor-pointer p-4 rounded-2xl hover:bg-slate-50 transition-colors">
                   <div className="shrink-0 w-32 h-20 rounded-xl overflow-hidden shadow-lg">
                     <img src={sermon.thumbnail} className="w-full h-full object-cover group-hover:scale-110 transition-transform" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">{sermon.title}</h4>
+                    <h4 className="font-bold text-slate-900 group-hover:text-indigo-600 transition-colors line-clamp-1">{sermon.title}</h4>
                     <p className="text-sm text-slate-500">{sermon.preacher}</p>
                     <p className="text-xs text-slate-400 mt-1">{sermon.date}</p>
                   </div>

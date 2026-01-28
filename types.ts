@@ -77,4 +77,4 @@ export interface NewMember {
   status: 'New' | 'Contacted' | 'In Progress' | 'Member';
 }
 
-export type Page = 'home' | 'about' | 'ministries' | 'sermons' | 'events' | 'give' | 'prayer' | 'contact' | 'membership' | 'admin' | 'devotions';
+export type Page = 'home' | 'about' | 'ministries' | 'sermons' | 'events' | 'prayer' | 'contact' | 'membership' | 'admin' | 'devotions';

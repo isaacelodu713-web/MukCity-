@@ -7,7 +7,6 @@ import About from './pages/About';
 import Ministries from './pages/Ministries';
 import Sermons from './pages/Sermons';
 import Events from './pages/Events';
-import Give from './pages/Give';
 import Prayer from './pages/Prayer';
 import Membership from './pages/Membership';
 import Contact from './pages/Contact';
@@ -46,8 +45,6 @@ const App: React.FC = () => {
         return <Sermons sermons={sermons} />;
       case 'events':
         return <Events events={events} />;
-      case 'give':
-        return <Give settings={settings} />;
       case 'prayer':
         return <Prayer />;
       case 'membership':

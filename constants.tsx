@@ -14,7 +14,7 @@ import {
   MapPin
 } from 'lucide-react';
 
-export const CHURCH_NAME = "Grace & Truth Community Church";
+export const CHURCH_NAME = "Suubira Victory Ministries";
 export const SLOGAN = "A Home for Faith, Hope, and Love";
 
 export const MOCK_SERMONS: Sermon[] = [

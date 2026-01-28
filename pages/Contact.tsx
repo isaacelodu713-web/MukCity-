@@ -16,30 +16,33 @@ const Contact: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
               <div className="space-y-6">
                 <div className="flex gap-4 items-start">
-                  <div className="text-indigo-600"><MapPin /></div>
+                  <div className="text-indigo-600 mt-1"><MapPin /></div>
                   <div>
                     <h4 className="font-bold mb-1">Visit Us</h4>
-                    <p className="text-slate-500 text-sm">123 Gospel Street, Divine Heights, TX 75001</p>
+                    <p className="text-slate-500 text-sm">
+                      Uganda, central, mukono, goma division, nantabulirwa ward in nantabulirwa,<br/>
+                      P.O BOX MUKONO 153665
+                    </p>
                   </div>
                 </div>
                 <div className="flex gap-4 items-start">
-                  <div className="text-indigo-600"><Phone /></div>
+                  <div className="text-indigo-600 mt-1"><Phone /></div>
                   <div>
                     <h4 className="font-bold mb-1">Call Us</h4>
-                    <p className="text-slate-500 text-sm">+1 (555) 123-4567</p>
+                    <p className="text-slate-500 text-sm">+17745780064</p>
                   </div>
                 </div>
                 <div className="flex gap-4 items-start">
-                  <div className="text-indigo-600"><Mail /></div>
+                  <div className="text-indigo-600 mt-1"><Mail /></div>
                   <div>
                     <h4 className="font-bold mb-1">Email Us</h4>
-                    <p className="text-slate-500 text-sm">hello@graceandtruth.org</p>
+                    <p className="text-slate-500 text-sm">info.suubiravictoryministries@gmail.com</p>
                   </div>
                 </div>
               </div>
               <div className="space-y-6">
                 <div className="flex gap-4 items-start">
-                  <div className="text-indigo-600"><Clock /></div>
+                  <div className="text-indigo-600 mt-1"><Clock /></div>
                   <div>
                     <h4 className="font-bold mb-1">Office Hours</h4>
                     <p className="text-slate-500 text-sm">Mon - Fri: 9:00 AM - 5:00 PM</p>
