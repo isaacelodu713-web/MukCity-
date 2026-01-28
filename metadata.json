@@ -1,0 +1,7 @@
+{
+  "name": "Grace & Truth Church Digital Portal",
+  "description": "A comprehensive, modern church management and outreach platform featuring sermon archives, online giving, event registration, and an AI-powered spiritual guide.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
